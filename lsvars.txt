@@ -1,0 +1,63 @@
+grib_ls -p paramId,shortName,name GPOSCPT20250901062025090106P.icn.TQ0299L064.grb 
+
+paramId     shortName   name        
+300132      topo        Topography [m]
+300081      lsmk        Land sea mask [0,1]
+300135      pslc        Surface pressure [hPa]
+300033      uvel        Zonal wind (u) [m/s]
+300034      vvel        Meridional wind (v) [m/s]
+300039      omeg        Omega [Pa/s]      
+300035      fcor        Stream function [m2/s]
+300036      potv        Velocity potential [m2/s] 
+300007      zgeo        Geopotential height [gpm]
+300002      psnm        Sea level pressure [hPa]
+300011      temp        Absolute temperature [K]
+300051      umes        Specific humidity [kg/kg]
+300054      agpl        Inst. precipitable water [kg/m2]
+300187      tsfc        Surface temperature [K]
+300161      tp2m        Temperature at 2-m from surface [K]   
+300199      q02m        Specific humidity at 2-m from surface [kg/kg]   
+300130      u10m        10 metre u-wind component [m/s]
+300131      v10m        10 metre v-wind component [m/s]
+300227      liqp        Liquid mixing ratio [kg/kg] 
+300233      icep        Ice mixing ratio [kg/kg] 
+
+* Nota1: as variáveis tp2m q02m editei à mão nesta tabela, pois não foram reconhecidas automaticamente pelo grib_ls (olhei no arquivo CTL e confirmei as informações)
+* Nota2: as variáveis liqp e icep, foram lidas pelo grib_ls como vdcc (vertical dist total cloud cover) e rsmt (time mean surface relative humidity), mas no arquivo CTL elas são liqp (liquid mixing ratio kg/kg) e icep (ice mixing ratio kg/kg)
+
+grib_ls -p paramId,shortName,name GPOSCPT20251105002025110506P.fct.TQ0299L064.grb
+
+paramId     shortName   name       
+300132      topo        Topography [m]
+300081      lsmk        Land sea mask [0,1]
+300135      pslc        Surface pressure [hPa]
+300033      uvel        Zonal wind (u) [m/s]
+300034      vvel        Meridional wind (v) [m/s]
+300039      omeg        Omega [Pa/s] 
+300035      fcor        Stream function [m2/s]
+300036      potv        Velocity potential [m2/s]
+300007      zgeo        Geopotential height [gpm]
+300002      psnm        Pressure reduced to msl [hPa]
+300011      temp        Absolute temperature [K]
+300051      umes        Specific humidity [kg/kg]
+300054      agpl        Inst. precipitable water [kg/m2]
+300187      tsfc        Surface temperature [K]
+300161      tp2m        Temperature at 2-m from surface [K]
+300199      q02m        Specific humidity at 2-m from surface [kg/kg]
+300130      u10m        10 metre u-wind component [m/s]
+300131      v10m        10 metre v-wind component [m/s]
+300227      liqp        Liquid mixing ratio [kg/kg]
+300233      icep        Ice mixing ratio [kg/kg]
+300061      prec        Total precipitation [kg/m2/day]
+300063      prcv        Convective precipitation [kg/m2/dia]
+300122      cssf        Sensible heat flux from surface [W/m2]
+300121      clsf        Latent heat flux from surface [W/m2]
+300207      olis        Downward long wave at bottom [W/m2]
+300211      oles        Upward long wave at bottom [W/m2]
+300114      role        Outgoing long wave at top [W/m2]
+300209      ocis        Downward short wave at ground [W/m2]
+300212      oces        Upward short wave at ground [W/m2]
+300214      roce        Upward short wave at top [W/m2]
+300166      o3mr        Ozone mixing ratio [kg/kg] 
+
+carlos.bastarz@inpe.br (26/02/2026)
