@@ -28,7 +28,7 @@ Utilize o script `run_convert_to_netcdf.sh` para converter os arquivos Grib do B
 
 **Nota:**
 
-  1. O script `run_convert_to_netcdf.sh` cria um array para converter todos os arquivos Grib encontrados para NetCDF, o valor 800 pode ser alterado, mas caso existam menos de 800 arquivos a serem processados, o job será concluído ao final do processamento do último arquivo.
+  * O script `run_convert_to_netcdf.sh` cria um array para converter todos os arquivos Grib encontrados para NetCDF, o valor 800 pode ser alterado, mas caso existam menos de 800 arquivos a serem processados, o job será concluído ao final do processamento do último arquivo.
     Uso:
         ```bash
         sbatch run_convert_to_netcdf.sh
