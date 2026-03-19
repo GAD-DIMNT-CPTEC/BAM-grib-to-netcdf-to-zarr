@@ -10,13 +10,13 @@ Utilize o script `run_qsub_pos_cycle.sh` para pós-processar as previsões espec
 
 **Notas:** 
 
-    1. O script de submissão gerado utiliza um array para pós-processar várias datas de referência ao mesmo tempo. Por exemplo, se o modelo foi executado para as datas de referência entre 2025090100 a 2025110100 a cada dia, o script de submissão criará um array de submissões para os n dias dentro do período (vide diretiva `#SBATCH --array=1-${ncycles}` no script, onde `ncycles é o número de dias`);
+  1. O script de submissão gerado utiliza um array para pós-processar várias datas de referência ao mesmo tempo. Por exemplo, se o modelo foi executado para as datas de referência entre 2025090100 a 2025110100 a cada dia, o script de submissão criará um array de submissões para os n dias dentro do período (vide diretiva `#SBATCH --array=1-${ncycles}` no script, onde `ncycles é o número de dias`);
     Uso:
         ```bash
         ./run_qsub_pos_cycle.sh
         ```
-    2. O arquivo `grid_900x450.txt` é necessário para a conversão.
-    3. Caso seja necessário, utilize o script `fix_ctl_files.sh` para consertar eventuais falhas na criação dos arquivos `.ctl` e `.idx`.
+  2. O arquivo `grid_900x450.txt` é necessário para a conversão.
+  3. Caso seja necessário, utilize o script `fix_ctl_files.sh` para consertar eventuais falhas na criação dos arquivos `.ctl` e `.idx`.
     Uso:
         ```bash
         ./fix_ctl_files.sh
@@ -28,7 +28,7 @@ Utilize o script `run_convert_to_netcdf.sh` para converter os arquivos Grib do B
 
 **Nota:**
 
-    1. O script `run_convert_to_netcdf.sh` cria um array para converter todos os arquivos Grib encontrados para NetCDF, o valor 800 pode ser alterado, mas caso existam menos de 800 arquivos a serem processados, o job será concluído ao final do processamento do último arquivo.
+  1. O script `run_convert_to_netcdf.sh` cria um array para converter todos os arquivos Grib encontrados para NetCDF, o valor 800 pode ser alterado, mas caso existam menos de 800 arquivos a serem processados, o job será concluído ao final do processamento do último arquivo.
     Uso:
         ```bash
         sbatch run_convert_to_netcdf.sh
@@ -39,9 +39,10 @@ Utilize o script `run_convert_to_netcdf.sh` para converter os arquivos Grib do B
 Utilize os script `to_zarr.sbatch` e `to_zarr.py` para converter as previsões de NetCDF para Zarr.
 
 Uso:
-    ```bash
-    sbatch to_zarr.sbatch
-    ```
+```bash
+sbatch to_zarr.sbatch
+```
 
 **Nota:**
-    * O script `to_zarr.py` é utilizado pelo script de submissão `to_zarr.sbatch`. 
+
+* O script `to_zarr.py` é utilizado pelo script de submissão `to_zarr.sbatch`. 
