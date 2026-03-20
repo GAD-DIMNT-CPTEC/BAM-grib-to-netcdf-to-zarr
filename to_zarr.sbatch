@@ -17,6 +17,6 @@ echo "Rodando EXP${EXP_ID}"
 hostname
 
 source /home/carlos.bastarz/miniconda3/etc/profile.d/conda.sh
-conda activate xarray
+conda activate SMNA-Exps
 
 python /mnt/beegfs/carlos.bastarz/SMNA_v3.0.x_check/anls_compare/pos/convert_to_netcdf/output/to_zarr.py
