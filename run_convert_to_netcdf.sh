@@ -7,7 +7,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=128G
 #SBATCH --array=1-800
-#SBATCH --partition=PESQ1
+#SBATCH --partition=batch
 
 set -euo pipefail
 
@@ -15,12 +15,12 @@ set -euo pipefail
 # CONFIG
 # ==============================
 bpath=/mnt/beegfs/carlos.bastarz/SMNA_v3.0.x_check/anls_compare/pos
-expname=OPER
-yyyymm=202512
+expname=EXP2
+yyyymm=202510
 
 module load cdo-2.0.4-gcc-9.4.0-bjulvnd
 
-OUTDIR=${bpath}/convert_to_netcdf/output/${expname}
+OUTDIR=${bpath}/convert_to_netcdf/output/${expname}/analysis_nc
 mkdir -p "$OUTDIR"
 
 # ==============================
